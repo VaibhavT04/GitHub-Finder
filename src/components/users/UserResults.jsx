@@ -14,10 +14,11 @@ function UserResults() {
   const fetchUsers = async () => {
     const response = await fetch(`https://api.github.com/users`,{
         headers: {
-            Authorization: `token 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`
+            Authorization: `token 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`
         }
     })
     const data = await response.json()
+    console.log(data)
     setUsers(data);
     setLoading(false)
   }
@@ -35,7 +36,7 @@ function UserResults() {
       )
   }
   else{
-    return <Spinner/>
+    return <h3>Loading...</h3>
   }
 }
 
